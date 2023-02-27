@@ -1,7 +1,10 @@
 const container = document.getElementById("container");
-const gridItem= document.getElementsByClassName("grid-item");
+const gridItem = document.getElementsByClassName("grid-item");
+const reset = document.getElementById("reset");
 
 makeRows(16,16);
+
+
 
 function makeRows(rows, cols) {
   container.style.setProperty('--grid-rows', rows);
@@ -14,7 +17,10 @@ function makeRows(rows, cols) {
 
 container.addEventListener('mouseover', function classClicked(event){
     event.target.classList.add('addedColor');
+    gridPixel.style.backgroundColor = "none";
+
 });
+
 
 function amountGrids() {
     let gridAmount = prompt("How many grids would you like?");
